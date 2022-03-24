@@ -3,7 +3,7 @@
 // Si tienen el mismo tamaño. debe devolver un 0.
 
 function arrayMayor(elementos1, elementos2) {
-
+    // podéis utilizar .length
 }
 
 console.log(arrayMayor([1, 2], [4, 5])); // 0
