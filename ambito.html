@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p> Click me! </p>
+
+    <script>
+        // variable global
+        let veces = 0; // almacena las veces que hemos hecho click
+        var vecesGlobal = -1; // variable global accesible desde window.vecesGlobal
+
+        // array de cosas
+        let cosas = ["Bigotes", 34, {
+            x: 1,
+            y: 6
+        }];
+
+        for (let i = 0; i < cosas.length; i++) {
+            console.log(cosas[i]);
+            veces++;
+        }
+
+        console.log(veces);
+
+        // Cuando el valor de las variables no tiene el que tu esperas tras actualizarlas; fíjate en que ámbito las estás declarando, cómo las estás declarando (var, let , const?); y donde es que las actualizas.
+
+        // RED FLAGS:
+        // 1. Declarar variables de estado dentro de funciones (let veces = 0)
+        // 2. Declarar variables con "var" dentro de una función
+
+        document.querySelector("p").addEventListener("click", (event) => {
+            var vecesGlobal = 555;
+            console.log(window.vecesGlobal); // AMBITO GLOBAL; solo accesible si definimos 'veces' con var
+        })
+
+    </script>
+
+    <script src="otro.js"></script>
+
+
+</body>
+
+</html>
