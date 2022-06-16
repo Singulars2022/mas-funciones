@@ -1,3 +1,5 @@
+// Documentación: https://es.javascript.info/rest-parameters-spread#parametros-rest
+
 // 1. Copiar un array
 let gatos = ["Vertín", "Bigotes"];
 
